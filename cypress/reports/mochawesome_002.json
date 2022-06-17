@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-07T11:33:26.994Z",
+    "end": "2022-06-07T11:33:54.044Z",
+    "duration": 27050,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0004abe4-464c-4550-be52-d36591e0da9b",
+      "title": "",
+      "fullFile": "cypress/integration/CNATTApp.js",
+      "file": "cypress/integration/CNATTApp.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+          "title": "CNATTAppTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify User is able to navigate into location page with valid user",
+              "fullTitle": "CNATTAppTestSuite Verify User is able to navigate into location page with valid user",
+              "timedOut": null,
+              "duration": 14770,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cnatt.getWeatherEvent().click();\ncnatt.getrReschedule().click();\ncnatt.getNextButton().click();\ncy.url().should('include', 'location'); //cy.url().should('eq', 'https://sr-cx-cnatt-ui-dev.nonprod.proproctor.prometric.com/location')",
+              "err": {},
+              "uuid": "20e0c3fd-f727-41a4-a295-1f006de998f5",
+              "parentUUID": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify User is able to select location from option and navigate into impact dates page",
+              "fullTitle": "CNATTAppTestSuite Verify User is able to select location from option and navigate into impact dates page",
+              "timedOut": null,
+              "duration": 6422,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cnatt.getLocationTextBox();\ncnatt.getLocationAutoSuggestion().click();\ncnatt.getLocationNextButton().click();\ncy.url().should('include', 'impact-dates'); //cy.url().should('eq', 'https://sr-cx-cnatt-ui-dev.nonprod.proproctor.prometric.com/impact-dates')",
+              "err": {},
+              "uuid": "d0520dce-aa56-472b-ba1c-019fe22fef54",
+              "parentUUID": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify after select cancellation & reschedule date range user able to navigate into create-csv page",
+              "fullTitle": "CNATTAppTestSuite Verify after select cancellation & reschedule date range user able to navigate into create-csv page",
+              "timedOut": null,
+              "duration": 476,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cnatt.getDisplacementCalendarTextBox().click({\n  force: true\n});\ncnatt.getRescheduleStartDate().click({\n  force: true\n});\ncnatt.getRescheduleEndDate().click({\n  force: true\n});\ncnatt.getOutside();\ncnatt.getScrollDown();\ncnatt.getImpactDatesNextButton().click();\ncnatt.getCreateCSVHeader().contains('Prometric-Initiated Displacement Form');",
+              "err": {},
+              "uuid": "03db1e83-e644-48dc-9e45-134e65deb849",
+              "parentUUID": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify after select proper option on create csv page user is able to navigate into csv preview page",
+              "fullTitle": "CNATTAppTestSuite Verify after select proper option on create csv page user is able to navigate into csv preview page",
+              "timedOut": null,
+              "duration": 1567,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cnatt.getScrollDown();\ncnatt.getCreateCSVNextButton().click();\ncnatt.getCSVPreviewHeader().contains('Please review CSV: ');",
+              "err": {},
+              "uuid": "3fdb0dce-6d17-44c5-9913-8ec4d0f23ada",
+              "parentUUID": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify User is able to navigate into Download csv page",
+              "fullTitle": "CNATTAppTestSuite Verify User is able to navigate into Download csv page",
+              "timedOut": null,
+              "duration": 479,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cnatt.getScrollDown();\ncnatt.getCSVPreviewNextButton().click();\ncnatt.getDownloadCSVHeader().contains('Your .csv file is ready to download');",
+              "err": {},
+              "uuid": "59c58cde-d4b7-4677-82ef-7334c32fa326",
+              "parentUUID": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify file is downloaded successfully",
+              "fullTitle": "CNATTAppTestSuite Verify file is downloaded successfully",
+              "timedOut": null,
+              "duration": 109,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cnatt.getScrollDown();\ncnatt.getDownloadCSVButton().click();\ncy.readFile(Cypress.config(\"fileServerFolder\") + \"/cypress/downloads/06.15.2022_Boston, MA_weather_reschedule.csv\");",
+              "err": {},
+              "uuid": "b3bbeba1-6a32-40c2-a452-1d4a2be60a74",
+              "parentUUID": "b019c2be-8e1b-4580-b632-f605ca2aa98d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20e0c3fd-f727-41a4-a295-1f006de998f5",
+            "d0520dce-aa56-472b-ba1c-019fe22fef54",
+            "03db1e83-e644-48dc-9e45-134e65deb849",
+            "3fdb0dce-6d17-44c5-9913-8ec4d0f23ada",
+            "59c58cde-d4b7-4677-82ef-7334c32fa326",
+            "b3bbeba1-6a32-40c2-a452-1d4a2be60a74"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23823,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFileName": "report",
+        "openReportInBrowser": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

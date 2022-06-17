@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-07T11:52:57.283Z",
+    "end": "2022-06-07T11:53:19.021Z",
+    "duration": 21738,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ce33e5f-6c0e-4b35-b718-71f6ac82830a",
+      "title": "",
+      "fullFile": "cypress/integration/TestWebControlUI.js",
+      "file": "cypress/integration/TestWebControlUI.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa639a3f-6cbe-4909-b789-5e3631c49cef",
+          "title": "TestWebControlUI",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling Web Control UI",
+              "fullTitle": "TestWebControlUI Handling Web Control UI",
+              "timedOut": null,
+              "duration": 7770,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check boxes\ncy.visit(Cypress.env('TestWebControlURL'));\nwebControl.getcheckBoxOption1().check().should('be.checked').and('have.value', 'option1');\nwebControl.getcheckBoxOption1().uncheck().should('not.be.checked');\nwebControl.getcheckBox().check(['option2', 'option3']); //Static Dropdown\nwebControl.getcheckBoxOption2().should('have.value', 'option2'); //Dynamic dropdowns\nwebControl.getAutoComplete().type('ind');\ncy.get('.ui-menu-item div').each(($e1, index, $list) => {\n  if ($e1.text() === \"India\") {\n    $e1.click();\n  }\n}); //autocomplete\nwebControl.getAutoComplete().should('have.value', 'India'); //visible invisible\nwebControl.getDisplayedTextBox().should('be.visible');\nwebControl.getHideTextBox().click();\nwebControl.getDisplayedTextBox().should('not.be.visible');\nwebControl.getshowTextBox().click();\nwebControl.getDisplayedTextBox().should('be.visible'); //radio buttons\nwebControl.getRadioButton().check().should('be.checked');",
+              "err": {},
+              "uuid": "def2089a-9d99-46ca-af18-a958fd3c0b6a",
+              "parentUUID": "aa639a3f-6cbe-4909-b789-5e3631c49cef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hadnling Alert & Child Tab",
+              "fullTitle": "TestWebControlUI Hadnling Alert & Child Tab",
+              "timedOut": null,
+              "duration": 7231,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check boxes\ncy.visit(Cypress.env('TestWebControlURL'));\nwebControl.getAlertButton().click();\nwebControl.getConfirmButton().click();\ncy.on('window:alert', str => {\n  //Mocha\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', str => {\n  //Mocha\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n});\nwebControl.getOpenTab().invoke('removeAttr', 'target').click();\ncy.url().should('include', 'rahulshettyacademy');\ncy.go('back');",
+              "err": {},
+              "uuid": "705dfb66-3099-474d-906e-c5d93f8a04f4",
+              "parentUUID": "aa639a3f-6cbe-4909-b789-5e3631c49cef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mouse Hover & Force Click",
+              "fullTitle": "TestWebControlUI Mouse Hover & Force Click",
+              "timedOut": null,
+              "duration": 1883,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('TestWebControlURL'));\nwebControl.getMouseHover().invoke('show');\ncy.contains('Top').click({\n  force: true\n});\ncy.url().should('include', 'top');",
+              "err": {},
+              "uuid": "c7f90998-298d-4b47-b7e3-4b8cb52fee02",
+              "parentUUID": "aa639a3f-6cbe-4909-b789-5e3631c49cef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "IFrameTest",
+              "fullTitle": "TestWebControlUI IFrameTest",
+              "timedOut": null,
+              "duration": 3667,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('TestWebControlURL'));\ncy.frameLoaded(\"#courses-iframe\");\ncy.iframe().find(\"a[href*='mentorship']\").eq(0).click(); //cy.iframe().find(\"h1[class*='pricing-title']\").should('have.length',2)",
+              "err": {},
+              "uuid": "40491fe9-a96e-4192-9cde-3cbfef909fc8",
+              "parentUUID": "aa639a3f-6cbe-4909-b789-5e3631c49cef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "def2089a-9d99-46ca-af18-a958fd3c0b6a",
+            "705dfb66-3099-474d-906e-c5d93f8a04f4",
+            "c7f90998-298d-4b47-b7e3-4b8cb52fee02",
+            "40491fe9-a96e-4192-9cde-3cbfef909fc8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20551,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFileName": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

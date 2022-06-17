@@ -1,0 +1,34 @@
+{
+  "defaultCommandTimeout": 10000,
+  "video": true,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "reportFileName": "report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "charts": true,
+    "reportPageTitle": "My Test Suite",
+    "embeddedScreenshots": true
+  },
+  "env": {
+    "POCurl": "https://rahulshettyacademy.com/angularpractice/",
+    "Prometricurl": "https://sr-cx-registration-scheduling-ui-bil.nonprod.proproctor.prometric.com/",
+    "PrometricVerifyurl": "https://sr-cx-registration-scheduling-ui-bil.nonprod.proproctor.prometric.com/verify",
+    "CNATTURL": "https://sr-cx-cnatt-ui-dev.nonprod.proproctor.prometric.com/",
+    "ApiTestURL": "https://rahulshettyacademy.com/angularAppdemo/",
+    "SessionTestURL": "https://rahulshettyacademy.com/client",
+    "RSAPI": "https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty",
+    "TestWebControlURL": "https://rahulshettyacademy.com/AutomationPractice/",
+    "screenshotsFolder": "cypress/screenshots"
+  },
+  "retries": {
+    "runMode": 1
+  },
+  "testFiles": [
+    "**/*.feature",
+    "**/*.js"
+  ],
+  "projectId": "z5s7jo"
+}
