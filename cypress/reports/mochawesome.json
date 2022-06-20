@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-07T11:33:14.492Z",
-    "end": "2022-06-07T11:33:17.818Z",
-    "duration": 3326,
+    "start": "2022-06-20T10:00:20.853Z",
+    "end": "2022-06-20T10:00:25.736Z",
+    "duration": 4883,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ba3d0fbc-dc08-41c8-8248-dd303f799edf",
+      "uuid": "999f34b1-cf13-4971-a23c-55aab8404937",
       "title": "",
       "fullFile": "cypress/integration/ApiSecurityTest.js",
       "file": "cypress/integration/ApiSecurityTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f1de54ad-2096-4657-a3ef-bc97f8cd1cd9",
+          "uuid": "4bc6dc53-a647-4f08-8f0b-b9093e413718",
           "title": "Api Security Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Api Security Test case",
               "fullTitle": "Api Security Test Suite Api Security Test case",
               "timedOut": null,
-              "duration": 1529,
+              "duration": 1490,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('ApiTestURL'));\ncy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty', req => {\n  req.url = \"https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=malhotra\";\n  req.continue(res => {// expect(res.statusCode).to.equal(403)\n  });\n}).as(\"dummyUrl\");\ncy.get(\"button[class='btn btn-primary']\").click();\ncy.wait('@dummyUrl');",
               "err": {},
-              "uuid": "3efb55f3-efdd-47b3-af06-3c901ac242fe",
-              "parentUUID": "f1de54ad-2096-4657-a3ef-bc97f8cd1cd9",
+              "uuid": "9711b2ba-bc52-446d-a7c9-41b7b94bb069",
+              "parentUUID": "4bc6dc53-a647-4f08-8f0b-b9093e413718",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3efb55f3-efdd-47b3-af06-3c901ac242fe"
+            "9711b2ba-bc52-446d-a7c9-41b7b94bb069"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1529,
+          "duration": 1490,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -96,11 +96,12 @@
       "options": {
         "reportDir": "cypress/reports",
         "reportFileName": "report",
-        "openReportInBrowser": true,
         "overwrite": false,
         "html": true,
         "json": true,
-        "charts": true
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true
       },
       "version": "6.2.0"
     }

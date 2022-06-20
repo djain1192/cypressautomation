@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-07T11:33:21.251Z",
-    "end": "2022-06-07T11:33:23.531Z",
-    "duration": 2280,
+    "start": "2022-06-20T10:00:29.041Z",
+    "end": "2022-06-20T10:00:31.262Z",
+    "duration": 2221,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "717c38ef-105c-4e96-a870-e99e4d3b92fd",
+      "uuid": "a081d1b5-d7ed-4aa1-9053-6059ce7fb090",
       "title": "",
       "fullFile": "cypress/integration/ApiTest.js",
       "file": "cypress/integration/ApiTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "890b4078-272d-4d8e-a8ef-0adafbe49007",
+          "uuid": "eceb41a4-3745-49c0-8683-3fd25c8adaee",
           "title": "Api Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "My Api Test case",
               "fullTitle": "Api Test Suite My Api Test case",
               "timedOut": null,
-              "duration": 1356,
+              "duration": 1335,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('ApiTestURL'));\ncy.intercept({\n  method: 'GET',\n  url: Cypress.env('RSAPI')\n}, {\n  statusCode: 200,\n  body: [{\n    \"book_name\": \"RestAssured with Java\",\n    \"isbn\": \"RSU\",\n    \"aisle\": \"2301\"\n  }]\n}).as('bookretrievals');\napiTest.primaryButton().click();\ncy.wait('@bookretrievals').should(({\n  request,\n  response\n}) => {\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available'); //length of the response array = rows of the table\n//#endregion ApiTest",
               "err": {},
-              "uuid": "0fe192fa-25d7-4762-bf8c-7ba10d15497a",
-              "parentUUID": "890b4078-272d-4d8e-a8ef-0adafbe49007",
+              "uuid": "f6727840-bb08-4c48-8df5-c460e7bf3cff",
+              "parentUUID": "eceb41a4-3745-49c0-8683-3fd25c8adaee",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0fe192fa-25d7-4762-bf8c-7ba10d15497a"
+            "f6727840-bb08-4c48-8df5-c460e7bf3cff"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1356,
+          "duration": 1335,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -96,11 +96,12 @@
       "options": {
         "reportDir": "cypress/reports",
         "reportFileName": "report",
-        "openReportInBrowser": true,
         "overwrite": false,
         "html": true,
         "json": true,
-        "charts": true
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true
       },
       "version": "6.2.0"
     }

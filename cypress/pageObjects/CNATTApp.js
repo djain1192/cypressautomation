@@ -60,12 +60,12 @@ class CNATTApp
 
     getRescheduleStartDate()
     {
-    return cy.get('[data-date-value="1655231400000"]')
+    return cy.get('[data-date-value="1656354600000"]')
     }
 
     getRescheduleEndDate()
     {
-    return cy.get('[data-date-value="1655231400000"]')
+    return cy.get('[data-date-value="1656354600000"]')
     }
 
     getOutside()

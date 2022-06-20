@@ -66,7 +66,7 @@ const cnatt = new CNATTApp
     it('Verify file is downloaded successfully', () => {
         cnatt.getScrollDown()
         cnatt.getDownloadCSVButton().click()
-        cy.readFile(Cypress.config("fileServerFolder") + "/cypress/downloads/06.15.2022_Boston, MA_weather_reschedule.csv")
+        cy.readFile(Cypress.config("fileServerFolder") + "/cypress/downloads/06.28.2022_Boston, MA_weather_reschedule.csv")
 
 
     })
