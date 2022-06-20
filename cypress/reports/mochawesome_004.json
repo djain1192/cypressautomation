@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-07T11:34:19.532Z",
-    "end": "2022-06-07T11:34:19.533Z",
-    "duration": 1,
+    "start": "2022-06-20T10:01:29.079Z",
+    "end": "2022-06-20T10:01:29.079Z",
+    "duration": 0,
     "testsRegistered": 0,
     "passPercent": null,
     "pendingPercent": null,
@@ -39,11 +39,12 @@
       "options": {
         "reportDir": "cypress/reports",
         "reportFileName": "report",
-        "openReportInBrowser": true,
         "overwrite": false,
         "html": true,
         "json": true,
-        "charts": true
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true
       },
       "version": "6.2.0"
     }
